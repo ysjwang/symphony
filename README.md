@@ -1,2 +1,2 @@
-symphony
+Symphony Schedule App
 ========
