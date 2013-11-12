@@ -1,15 +1,44 @@
-﻿<!DOCTYPE html>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SCO Schedule</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>SCO Schedule</title>
-        <link rel="stylesheet" href="css/style.css" />
-    </head>
-    <body>
-        <script src="js/jquery-1.7.1.min.js"></script>
-        <script src="js/underscore-min.js"></script>
-        <script src="js/backbone-min.js"></script>
-        <script src="js/app.js"></script>
-    </body>
+<body>
+
+  <div id="app"></div>
+
+  <script type="text/template" id="signup-template">
+  <form accept-charset="UTF-8" action="/users" class="new_user" id="new_user" method="post">
+
+    <div class="field">
+      <label for="user_email">Email</label><br />
+      <input id="user_email" name="user[email]" type="text" />
+    </div>
+    <div class="field">
+      <label for="user_password">Password</label><br />
+      <input id="user_password" name="user[password]" type="password" />
+    </div>
+    <div class="field">
+      <label for="user_password_confirmation">Password confirmation</label><br />
+      <input id="user_password_confirmation" name="user[password_confirmation]" type="password" />
+    </div>
+    <div class="actions"><input name="commit" type="submit" value="Sign Up" /></div>
+  </form>
+  </script>
+
+  <script type="text/template" id="header-template">
+    <h1>User Manager</h1>
+    <a href="">Home</a>
+    <a href="#about">About</a>
+    <hr>
+  </script>
+  
+  <script src="js/jquery-1.7.1.min.js"></script>
+  <script src="js/underscore-min.js"></script>
+  <script src="js/backbone-min.js"></script>
+  <script src="js/app.js"></script>
+</body>
 </html>

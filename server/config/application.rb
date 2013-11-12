@@ -24,6 +24,7 @@ module ScheduleServer
       allow do
         origins '*' #'localhost:3000', '127.0.0.1:3000', /http:\/\/192\.168\.0\.\d{1,3}(:\d+)?/
         resource '/api/v1/*', :headers => :any, :methods => [:get, :post, :put, :delete, :options]
+        resource 'users/*', :headers => :any, :methods => [:get, :post, :put, :delete, :options]
       end
     end
 

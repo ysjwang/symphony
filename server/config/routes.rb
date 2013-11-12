@@ -2,13 +2,14 @@ ScheduleServer::Application.routes.draw do
 
   root to: "pages#index"
 
-  namespace :api, defaults: {format: :json} do
+  namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :events, only: [:index, :show, :create, :update, :destroy]
     end
   end
 
-  resources :users
+  resources :users, defaults: { format: :json }
+  
   resources :sessions
 
   get 'signup', to: 'users#new', as: 'signup'
